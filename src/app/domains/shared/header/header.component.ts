@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [NzMenuModule,NzIconModule],
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
