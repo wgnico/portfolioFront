@@ -1,44 +1,21 @@
-<nav class="bg-slate-200 shadow-lg">
-    <div class="container flex flex-wrap items-center justify-between mx-auto py-4  ">
-        <div class="flex items-center space-x-8">
-            <a href="" class="flex items-center">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3" alt="">
-                <span class="self-center text-xl font-semibold whitespace-nowrap">Wgnico</span>
+<nav class="bg-slate-200 shadow-lg ">
+    <div class="container flex flex-wrap items-center justify-center md:justify-between mx-auto py-4  ">
+        <div class="flex items-center">
+            <a href="" class="flex items-center mx-4 ">                
+                <span class="self-center text-xl font-semibold whitespace-nowrap font-serif text-sky-700">Wgnico</span>
             </a>
         </div>
-        <div class="">
-            <ul nz-menu nzMode="horizontal" class="flex">
-                <li nz-menu-item nzSelected>
-                    <span nz-icon nzType="mail"></span>
+        <div class="bg-slate-200">
+            <ul nz-menu nzMode="horizontal" class="flex bg-slate-200 text-sky-700 font-bold border-0">
+                <li nz-menu-item nzSelected>                    
                     Inicio
                 </li>
-                <li nz-menu-item >
-                    <span nz-icon nzType="mail"></span>
-                    Acerca de mi
+                <li nz-menu-item >                    
+                    <a href="#acercaDeMi">Acerca De Mi</a>
                 </li>              
-                <li nz-submenu nzTitle="Proyectos" nzIcon="down">
-                    
-                  <ul>
-                    <li nz-menu-group nzTitle="Item 1">
-                      <ul>
-                        <li nz-menu-item>Option 1</li>
-                        <li nz-menu-item>Option 2</li>
-                      </ul>
-                    </li>
-                    <li nz-menu-group nzTitle="Item 2">
-                      <ul>
-                        <li nz-menu-item>Option 3</li>
-                        <li nz-menu-item>Option 4</li>
-                        <li nz-submenu nzTitle="Sub Menu">
-                          <ul>
-                            <li nz-menu-item nzDisabled>Option 5</li>
-                            <li nz-menu-item>Option 6</li>
-                          </ul>
-                        </li>                        
-                      </ul>
-                    </li>
-                  </ul>
-                </li>                
+                <li nz-menu-item >                    
+                  <a href="#proyectos">Proyectos</a>
+              </li>
               </ul>
         </div>
 
