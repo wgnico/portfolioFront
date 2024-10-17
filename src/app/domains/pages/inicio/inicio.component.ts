@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { Proyecto } from '../../shared/models/proyecto.model';
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [NzDividerModule],
+  imports: [],
   templateUrl: './inicio.component.html'
 })
 export default class InicioComponent {
