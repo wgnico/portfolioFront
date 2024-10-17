@@ -1,15 +1,24 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, effect, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DarkModeService {
+  darkModeSignal = signal<string>(
+    typeof window !== 'undefined' 
+      ? JSON.parse(window.localStorage.getItem('darkModeSignal') ?? '"light"') 
+      : 'light' // Valor por defecto cuando no se puede acceder a window
+  );
 
-  darkModeSignal = signal<string>('null');
-
-  updateDarkMode(){
-    this.darkModeSignal.update((value)=>(value === "dark" ? "null": "dark"));
+  updateDarkMode() {
+    this.darkModeSignal.update((value) => (value === "dark" ? "light" : "dark"));
   }
 
-  constructor() { }
+  constructor() {
+    if (typeof window !== 'undefined') {
+      effect(() => {
+        window.localStorage.setItem('darkModeSignal', JSON.stringify(this.darkModeSignal()));
+      });
+    }
+  }
 }
