@@ -1,5 +1,9 @@
 import { Routes } from '@angular/router';
-import { LayoutComponent } from './domains/shared/layout/layout.component'
+import { LayoutComponent } from './domains/shared/layout/layout.component';
+// import { ProyectosComponent } from './domains/pages/proyectos/proyectos.component';
+
+
+
 
 
 export const routes: Routes = [
@@ -16,8 +20,8 @@ export const routes: Routes = [
                 loadComponent: ()=>import(`./domains/pages/acercademi/acercademi.component`)
             },
             {
-                path:"proyectos",
-                loadComponent: ()=>import(`./domains/pages/proyectos/proyectos.component`)
+                path:"proyectos/:id",
+                loadComponent: ()=>import('./domains/pages/proyectos/proyectos.component')
             }
         ]
     }

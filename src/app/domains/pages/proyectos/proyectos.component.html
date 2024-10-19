@@ -1,1 +1,34 @@
-<p>proyectos works!</p>
+<div class="min-h-screen dark:bg-slate-500 pb-14">    
+   <figure class="lg:flex bg-slate-200 dark:bg-slate-700 rounded-2xl p-8 mx-3 shadow-2xl mt-10">      
+    <img 
+        [src]="proyecto?.cover" 
+        alt="imagen representativa de un socrates progamador"
+        class="w-96 rounded-xl dark:bg-slate-700 bg-slate-200 p-1 mx-auto my-auto  ">
+        
+    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+        <blockquote class="">
+            <h1 class="font-bold font-serif text-2xl md:text-4xl text-sky-500 dark:text-slate-300">{{proyecto?.titulo}}</h1>
+            <h2 class="font-semibold text-1xl md:text-xl text-sky-600 dark:text-slate-400 my-3">{{proyecto?.subtitle}}</h2>
+            <p class=" font-medium text-sky-700 dark:text-white text-wrap lg:text-lg ">{{proyecto?.descripcion}}</p>
+            <div class="dark:text-white text-slate-500 font-bold text-xl mt-10">
+                <h3 class="dark:text-white text-sky-500 font-bold text-xl">Tecnologias</h3>
+                <div class="flex flex-wrap justify-center gap-4 mt-4">
+                    <div *ngFor="let skill of proyecto?.skills" class="flex flex-col items-center space-y-2 border-2 border-slate-500 w-32 rounded-2xl p-2 bg-white shadow-xl text-sky-600 dark:text-slate-600 " >
+                        <i [ngClass]="skill.class" class="text-3xl"></i> {{ skill.tec }}
+                    </div>
+                </div>
+                
+            </div>
+            <div class="flex justify-center mt-10  space-x-5 py-5">
+                
+                  <a [href]="proyecto?.web" target="_blank">
+                    <button class="bg-white dark:bg-slate-500 rounded-xl shadow-2xl align-middle border  text-sky-700 border-slate-300 dark:border-white dark:text-white w-24 font-bold">
+                      {{ proyecto?.tipo }}
+                    </button>
+                  </a>           
+            </div>
+        </blockquote>
+    </div>
+</figure>    
+
+</div>

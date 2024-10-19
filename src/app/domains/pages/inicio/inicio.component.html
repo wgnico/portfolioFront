@@ -2,7 +2,7 @@
 
     <figure class="lg:flex bg-slate-200 dark:bg-slate-700 rounded-2xl p-8 mx-3 shadow-2xl mt-10">      
         <img 
-            src="../../../../assets/img/socrates.png" 
+            src="https://res.cloudinary.com/dqpoljtf6/image/upload/v1729357003/socrates_jme008.png" 
             alt="imagen representativa de un socrates progamador"
             class="w-96 rounded-full shadow-2xl bg-white p-1 mx-auto my-auto  ">
             
@@ -15,6 +15,20 @@
 
                     En mi actual rol, me encargo de la programación backend con Java y Spring, y del frontend con Angular, además de realizar tareas de DevOps en infraestructura AWS. He desarrollado aplicaciones robustas, escalables y seguras, utilizando tecnologías clave como Git, Jenkins y Docker. Me apasiona la programación y el aprendizaje constante, y estoy siempre al día con las últimas tendencias y mejores prácticas en el mundo del backend. Estoy emocionado por la oportunidad de contribuir a proyectos desafiantes y continuar creciendo como profesional en el mundo de la tecnología. Estoy abierto a nuevas oportunidades de colaboración y dispuesto a aportar mis habilidades y experiencia para ayudar a llevar los proyectos al siguiente nivel. Espero poder conectar contigo y explorar posibles sinergias.  
                 </p>
+                <div class="flex justify-center mb-1 mt-10 space-x-5 py-2 gap-10 ">              
+                  <a href="https://linkedin.com/in/christian-nicolas-burgos" target="_blank">
+                    <button class="bg-white  text-sky-700 dark:bg-slate-500 rounded-xl shadow-2xl align-middle border border-slate-300 dark:border-white dark:text-white w-24 font-bold p-1">
+                      <i class="devicon-linkedin-plain"></i>
+                      LinkedIn
+                    </button>
+                  </a>
+                  <a href="https://github.com/wgnico" target="_blank">
+                    <button class="bg-white text-sky-700 dark:bg-slate-500 rounded-xl shadow-2xl align-middle border border-slate-300 dark:border-white dark:text-white w-24 font-bold p-1">
+                      <i class="devicon-github-original"></i>          
+                     GitHub
+                    </button>
+                  </a>              
+                </div>
             </blockquote>
         </div>
     </figure>    
@@ -26,11 +40,18 @@
           <figure class="border-4 border-slate-200 dark:bg-slate-700 dark:border-slate-700 dark:hover:border-white rounded-xl shadow-2xl divide-y-2 dark:divide-slate-700 bg-slate-200 hover:border-sky-700 flex flex-col justify-between">
             <img [src]="proyecto.cover" alt="" class="rounded-t-lg object-contain h-96 w-full ">
             <h4 class="text-center align-middle font-bold text-sky-700 dark:text-slate-300">{{ proyecto.titulo }}</h4>
-            <p class="text-slate-700 flex-grow dark:text-white">{{ proyecto.descripcion }}</p>
-            <div class="flex justify-center mb-1 mt-auto">
-              <button class="bg-white dark:bg-slate-500 rounded-xl shadow-2xl align-middle p-1 border border-slate-300 dark:border-white dark:text-white">
-                <a [href]="proyecto.web" target="_blank">{{ proyecto.tipo }}</a>
-              </button>
+            <p class="text-slate-500 flex-grow font-semibold text-center dark:text-white">{{ proyecto.subtitle }}</p>
+            <div class="flex justify-center mb-1 mt-auto space-x-5 py-2">              
+              <a [routerLink]="['/proyectos', proyecto.id]" routerLinkActive="active">
+                <button class="bg-white  text-sky-700 dark:bg-slate-500 rounded-xl shadow-2xl align-middle border border-slate-300 dark:border-white dark:text-white w-24 font-bold">
+                  Ver
+                </button>
+              </a>
+              <a [href]="proyecto.web" target="_blank">
+                <button class="bg-white text-sky-700 dark:bg-slate-500 rounded-xl shadow-2xl align-middle border border-slate-300 dark:border-white dark:text-white w-24 font-bold">
+                  {{ proyecto.tipo }}
+                </button>
+              </a>              
             </div>
           </figure>   
         }     
